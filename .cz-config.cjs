@@ -16,12 +16,14 @@ module.exports = {
 
   // 消息步骤
   messages: {
-    type: '请选择提交类型:',
-    subject: '请简要描述提交主题 (必填):\n',
-    body: '请输入详细描述 (可选，使用 "|" 换行):\n',
-    breaking: '列出所有 Breaking Changes (重大的破坏性变更，可选):\n',
-    footer: '请输入要关闭的 Issue (可选，如: #31, #34):\n',
-    confirmCommit: '确定要使用以上信息提交吗？(y/n/e/h)',
+    type: '选择一种你的提交类型:',
+    scope: '选择一个scope (可选):',
+    customScope: '请输入自定义的scope:',
+    subject: '短说明:\n',
+    body: '长说明，使用"|"换行(可选)：\n',
+    breaking: '非兼容性说明 (可选):\n',
+    footer: '关联关闭的issue，例如：#31, #34(可选):\n',
+    confirmCommit: '确定提交说明?(yes/no)',
   },
 
   // 跳过 scope、customScope 及其他不常用字段
