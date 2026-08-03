@@ -17,8 +17,6 @@ module.exports = {
   // 消息步骤
   messages: {
     type: '请选择提交类型:',
-    scope: '请输入影响范围 (可选，如: components, views, router 等):',
-    customScope: '请输入自定义的影响范围:',
     subject: '请简要描述提交主题 (必填):\n',
     body: '请输入详细描述 (可选，使用 "|" 换行):\n',
     breaking: '列出所有 Breaking Changes (重大的破坏性变更，可选):\n',
@@ -26,8 +24,8 @@ module.exports = {
     confirmCommit: '确定要使用以上信息提交吗？(y/n/e/h)',
   },
 
-  // 默认跳过不常用的字段，保持体验高效
-  skipQuestions: ['body', 'breaking', 'footer'],
+  // 跳过 scope、customScope 及其他不常用字段
+  skipQuestions: ['scope', 'customScope', 'body', 'breaking', 'footer'],
 
   // subject 限制长度
   subjectLimit: 100,
