@@ -1,0 +1,67 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "build:legacy": "cross-env VITE_LEGACY=true pnpm build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "commit": "cz",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@vueuse/core": "^10.1.2",
+    "axios": "^1.4.0",
+    "element-plus": "^2.9.0",
+    "jsencrypt": "^3.5.4",
+    "lodash-es": "^4.18.1",
+    "lucide-vue-next": "^1.0.0",
+    "pinia": "^2.1.4",
+    "vue": "^3.5.32",
+    "vue-router": "^4.2.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/lodash-es": "^4.17.12",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "@vitejs/plugin-legacy": "^8.0.2",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "code-inspector-plugin": "^2.0.3",
+    "commitizen": "^4.3.2",
+    "cross-env": "^10.1.0",
+    "cz-customizable": "^7.5.4",
+    "eslint": "8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.14.1",
+    "pinia-plugin-persist": "^1.0.0",
+    "prettier": "^3.5.3",
+    "sass-embedded": "^1.99.0",
+    "tailwindcss": "^4.0.0",
+    "terser": "^5.48.0",
+    "typescript": "^4.9.5",
+    "unplugin-auto-import": "^0.15.3",
+    "unplugin-element-plus": "^0.8.0",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^8.0.7",
+    "vite-plugin-svg-icons-enhance": "^0.0.16",
+    "vue-eslint-parser": "^9.4.2",
+    "vue-tsc": "^1.8.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  }
+}
