@@ -26,9 +26,9 @@ module.exports = {
     confirmCommit: '确定提交说明?(yes/no)',
   },
 
-  // 跳过不常用字段（移除 body 以开启长说明）
+  // 跳过不常用字段
   skipQuestions: ['scope', 'customScope', 'breaking', 'footer'],
 
   // subject 限制长度
-  subjectLimit: 100,
+  subjectLimit: 200,
 };

@@ -6,6 +6,11 @@ declare module '*.vue' {
   export default component;
 }
 
+declare module 'virtual:svg-icons-enhance' {
+  const preloadedIcons: Record<string, any>;
+  export default preloadedIcons;
+}
+
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_PORT: string;
