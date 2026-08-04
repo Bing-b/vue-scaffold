@@ -22,6 +22,16 @@ const router = createRouter({
         },
       ],
     },
+    {
+      path: '/404',
+      name: 'notFound',
+      component: () => import('../views/error/404.vue'),
+      meta: { title: '页面不存在' },
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/404',
+    },
   ],
 });
 
@@ -29,7 +39,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const userStore = useUserStore();
 
-  if (to.name !== 'login' && !userStore.token) {
+  if (to.name !== 'login' && to.name !== 'notFound' && !userStore.token) {
     next({ name: 'login' });
   } else if (to.name === 'login' && userStore.token) {
     next({ name: 'dashboard' });
